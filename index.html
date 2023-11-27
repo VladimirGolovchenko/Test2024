@@ -43,9 +43,33 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/64687519" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-	
-	
+
+
+
 <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
+
+<script>
+  function jivo_onLoadCallback() {
+    //скрываем стандартную кнопку Jivo
+    const jivo_custom_widget = true;
+  }
+</script>
+
+<button class="button1" onclick="jivo_api.open();">Support</button>
+
+<script>
+  function jivo_onOpen() {
+    button1.style.display = 'none';
+  }
+</script>
+
+<script>
+  function jivo_onClose() {
+    button1.style.display = 'block';
+  }
+</script>
+ 
+ 
 
 <!-- <style>
 	jdiv[class^="header_"] > jdiv {
