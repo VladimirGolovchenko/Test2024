@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, shrink-to-fit=no">
+
+
+    <title> Test page Jivo</title>
+
+    <link rel="stylesheet" href="CSS\global.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS\responsive.css" type="text/css"/>
+
+    <script type='text/javascript' src='JS/chatshortcut.js' id='gsl_contacts_container'></script>
+    <script type='text/javascript' src='JS/chatlib.js' id='libgsl-js'></script>
+
+    <script type='text/javascript' src='JS/elfsightsocialwidget.js' id='libgsl-js'></script>
+
+</head>
+
+<body>
+	 <img src="https://sbibankllc.ru/sites/default/files/inline-images/nakop.png">
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(64687519, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/64687519" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
+
+<!-- <script src="//code.jivo.ru/widget/OucWVsO7US" async></script> -->
+
+<!-- <script>
+	function jivo_onLoadCallback() {
+		setTimeout(() => {
+			jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.v6cHE6GB0t0t4J42ECnb8il8N4X40nLnR2RLMobj8Kc"); 
+		}, "1000");
+	}
+</script> -->
+	
+<!-- 
+<script> 
+    document.addEventListener("DOMContentLoaded", () => {
+	    	setTimeout(() => {
+   			jivo_config.chat_mode = 'online';
+			window.jivo_init();
+		}, "1000");
+  });
+</script> -->
+
+<!-- <script>
+	function jivo_onLoadCallback() {
+		setTimeout(() => {
+	   		jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.v6cHE6GB0t0t4J42ECnb8il8N4X40nLnR2RLMobj8Kc");
+		}, "1000");
+	}
+</script> -->
+
+<!-- <script>
+  function jivo_onLoadCallback() {
+    //скрываем стандартную кнопку Jivo
+    const jivo_custom_widget = true;
+  }
+</script> -->
+
+<!-- <button class="button1" onclick="jivo_api.open();">Support</button>
+
+<script>
+  function jivo_onOpen() {
+    button1.style.display = 'none';
+  }
+</script>
+
+<script>
+  function jivo_onClose() {
+    button1.style.display = 'block';
+  }
+</script>
+  -->
+ 
+
+<!-- <style>
+	jdiv[class^="header_"] > jdiv {
+    		border-top-right-radius: 12px!important;
+	}
+
+	jdiv[class^="header_"] jdiv[class^="leaf_"] {
+	    display: none !important;
+	}
+</style>
+ -->
+<!-- <script>
+	window.jivo_chat_page = true;
+</script>
+	
+<style>	
+	body jdiv[class^="globalClass"] > jdiv[class^="mobileContainer_"] {
+		position: absolute !important;
+
+		width: 50% !important;
+		height: 600px !important;
+		margin-top: 50px !important;
+		margin-left: 200px !important;
+	}
+</style> -->
+	
+</body>
+</html>
