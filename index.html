@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, shrink-to-fit=no"> -->
-
 	<title> Test page Jivo</title>
 	<link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-		<img src="https://sbibankllc.ru/sites/default/files/inline-images/nakop.png" onload="this.width*=0.5">
-
-		<!-- Стандарный код Jivo -->
-		<script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
-
+	<!-- Стандарный код Jivo -->
+	<script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
 	
-		<!--   <p><h3> Список ваших заказов	<b> в количестве 3 шт. </b>	по кнопке ниже: 	</h3></p> -->
-		<div style="margin: 40px 50px 30px 25px;">  <h2> Список заказов:</h2> </div>
-		
-		<button id="id_order_1" class="class_order_1"  onclick="var url1 = 'https://vladimirgolovchenko.github.io/Test2024/orders/order1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.uQG6TM4G9Qz_o0sBvdYIQ7tVMQpONtlnhGyN8vLolSA'; NewTab(url1);"> Заказ №1 </button>
-		<p>
-		<button class="class_order_2" onclick="var url2 = 'https://vladimirgolovchenko.github.io/Test2024/orders/order2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIifQ.f_FwjAi_VuW8SFydEjV-xLw56IOjXchSDszmuOUwcMA'; NewTab(url2);"> Заказ №2 </button>
-		<p>
-		<button class="class_order_3" onclick="var url3 = 'https://vladimirgolovchenko.github.io/Test2024/orders/order3?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY'; NewTab(url3)"> Заказ №3 </button>
-		
-		<script>
-			function NewTab(url) {
-				window.open(url, "_blank");
-			}
-		</script>
+	<img src="https://sbibankllc.ru/sites/default/files/inline-images/nakop.png" onload="this.width*=0.5">
+	<!--   <p><h3> Список ваших заказов	<b> в количестве 3 шт. </b>	по кнопке ниже: 	</h3></p> -->
+	<div style="margin: 40px 50px 30px 25px;">  <h2> Список заказов:</h2> </div>
+	
+	<button id="id_order_1" class="class_order_1"  onclick="var url1 = 'https://vladimirgolovchenko.github.io/Test2024/orders/order1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.uQG6TM4G9Qz_o0sBvdYIQ7tVMQpONtlnhGyN8vLolSA'; NewTab(url1);"> Заказ №1 </button>
+	<p>
+	<button class="class_order_2" onclick="var url2 = 'https://vladimirgolovchenko.github.io/Test2024/orders/order2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIifQ.f_FwjAi_VuW8SFydEjV-xLw56IOjXchSDszmuOUwcMA'; NewTab(url2);"> Заказ №2 </button>
+	<p>
+	<button class="class_order_3" onclick="var url3 = 'https://vladimirgolovchenko.github.io/Test2024/orders/order3?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY'; NewTab(url3)"> Заказ №3 </button>
+	
+	<script>
+		function NewTab(url) {
+			window.open(url, "_blank");
+		}
+	</script>
 
 			
 	<!-- Yandex.Metrika counter -->
@@ -54,82 +47,5 @@
 				
 		<noscript><div><img src="https://mc.yandex.ru/watch/64687519" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
-
-  
-
-<!-- <script>
-	function jivo_onLoadCallback() {
-		setTimeout(() => {
-			jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.v6cHE6GB0t0t4J42ECnb8il8N4X40nLnR2RLMobj8Kc"); 
-		}, "1000");
-	}
-</script> -->
-	
-<!-- 
-<script> 
-    document.addEventListener("DOMContentLoaded", () => {
-	    	setTimeout(() => {
-   			jivo_config.chat_mode = 'online';
-			window.jivo_init();
-		}, "1000");
-  });
-</script> -->
-
-<!-- <script>
-	function jivo_onLoadCallback() {
-		setTimeout(() => {
-	   		jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.v6cHE6GB0t0t4J42ECnb8il8N4X40nLnR2RLMobj8Kc");
-		}, "1000");
-	}
-</script> -->
-
-<!-- <script>
-  function jivo_onLoadCallback() {
-    //скрываем стандартную кнопку Jivo
-    const jivo_custom_widget = true;
-  }
-</script> -->
-
-<!-- <button class="button1" onclick="jivo_api.open();">Support</button>
-
-<script>
-  function jivo_onOpen() {
-    button1.style.display = 'none';
-  }
-</script>
-
-<script>
-  function jivo_onClose() {
-    button1.style.display = 'block';
-  }
-</script>
-  -->
- 
-
-<!-- <style>
-	jdiv[class^="header_"] > jdiv {
-    		border-top-right-radius: 12px!important;
-	}
-
-	jdiv[class^="header_"] jdiv[class^="leaf_"] {
-	    display: none !important;
-	}
-</style>
- -->
-<!-- <script>
-	window.jivo_chat_page = true;
-</script>
-	
-<style>	
-	body jdiv[class^="globalClass"] > jdiv[class^="mobileContainer_"] {
-		position: absolute !important;
-
-		width: 50% !important;
-		height: 600px !important;
-		margin-top: 50px !important;
-		margin-left: 200px !important;
-	}
-</style> -->
-	
 </body>
 </html>
