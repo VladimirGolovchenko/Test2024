@@ -4,17 +4,22 @@
   </head>
   
   <body>
-  
       <img src="https://krona-msk.ru/UserFiles/160719/metallprofil/image007.jpg">
       <div style="margin: 40px 50px 30px 25px;">  <h2> Заказ 3</h2> </div>
     
       <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
+
+      <script>
+         document.addEventListener("visibilitychange", () => {
+           jivo_api.clearHistory();
+           jivo_init();
+        });
+      </script>
+    
       <script>
           function jivo_onLoadCallback() {
             jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY");
           }
       </script>
-  
-  
   </body>
 </html>
