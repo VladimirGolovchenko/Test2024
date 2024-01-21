@@ -18,7 +18,9 @@
     
       <script>
           function jivo_onLoadCallback() {
-            jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY");
+            setTimeout(() => { 
+               jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY");
+            }, 100);
           }
       </script>
   </body>
