@@ -19,9 +19,10 @@
         
       <script>
           function jivo_onLoadCallback() {
-            setTimeout(() => { 
               jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.uQG6TM4G9Qz_o0sBvdYIQ7tVMQpONtlnhGyN8vLolSA");
-            }, 100);
+              setTimeout(() => {
+                jivo_api.open();
+              }, 500);
           }
       </script>
   </body>
