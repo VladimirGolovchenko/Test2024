@@ -14,8 +14,10 @@
          document.addEventListener("visibilitychange", () => {
             if (document.visibilityState === "visible") {
               // the page is visible
-              jivo_api.clearHistory();
-              jivo_init();
+              setTimeout(() => {
+                jivo_api.clearHistory();
+                jivo_init();
+              }, 1000);
             } else {
               // the page is hidden
               jivo_destroy();
