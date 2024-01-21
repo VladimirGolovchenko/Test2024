@@ -16,7 +16,7 @@
               setTimeout(() => {
                 jivo_api.clearHistory();
                 jivo_init();
-              }, 1000);
+              }, 300);
             } else {
               // the page is hidden
               jivo_destroy();
@@ -26,7 +26,9 @@
     
       <script>
           function jivo_onLoadCallback() {
-            jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIifQ.f_FwjAi_VuW8SFydEjV-xLw56IOjXchSDszmuOUwcMA");
+            setTimeout(() => {
+              jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIifQ.f_FwjAi_VuW8SFydEjV-xLw56IOjXchSDszmuOUwcMA");
+            }, 700);
             
             setTimeout(() => {
                 jivo_api.open();
