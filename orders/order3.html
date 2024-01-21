@@ -16,7 +16,7 @@
               setTimeout(() => {
                 jivo_api.clearHistory();
                 jivo_init();
-              }, 300);
+              }, 200);
             } else {
               // the page is hidden
               jivo_api.clearHistory();
@@ -28,11 +28,11 @@
           function jivo_onLoadCallback() {
             setTimeout(() => {
               jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY");
-            }, 700);
+            }, 400);
             
             setTimeout(() => {
                 jivo_api.open();
-            }, 1000);
+            }, 500);
           }
       </script>
   </body>
