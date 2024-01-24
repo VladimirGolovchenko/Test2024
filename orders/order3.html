@@ -4,37 +4,49 @@
   </head>
   
   <body>
-      <img src="https://krona-msk.ru/UserFiles/160719/metallprofil/image007.jpg">
-      <div style="margin: 40px 50px 30px 25px;">  <h2> Заказ 3</h2> </div>
-    
-      <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
-
-       <script>
-         document.addEventListener("visibilitychange", () => {
-            if (document.visibilityState === "visible") {
-              // the page is visible
-              setTimeout(() => {
+        <img src="https://krona-msk.ru/UserFiles/160719/metallprofil/image007.jpg">
+        <div style="margin: 40px 50px 30px 25px;">  <h2> Заказ 3</h2> </div>
+      
+        <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
+      
+        <!-- Checking the tab state -->
+        <script>
+           document.addEventListener("visibilitychange", () => {
+              if (document.visibilityState === "visible") {
+                // the page is visible
+                setTimeout(() => {
+                  jivo_api.clearHistory();
+                  jivo_init();
+                }, 300);
+              } else {
+                // the page is hidden
                 jivo_api.clearHistory();
-                jivo_init();
-              }, 300);
-            } else {
-              // the page is hidden
-              jivo_api.clearHistory();
-            }
-        });
-      </script>
+              }
+          });
+       </script>
     
-      <script>
-          function jivo_onLoadCallback() {
-            setTimeout(() => {
-              jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY");
-            }, 400);
-            
-            setTimeout(() => {
-                jivo_api.sendMessage("Client #123 - Заказ 3");
-                jivo_api.open();
-            }, 700);
-          }
+       <script>
+            function jivo_onLoadCallback() {
+              setTimeout(() => {
+                jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMifQ.edMF8sowJJ1JdReKtffcuOAAHPBgocAQBSvyX21bWbY");
+              }, 400);
+              
+              setTimeout(() => {
+                  ifSendMessageCompleted();
+              }, 700);
+            }
       </script>
+
+
+      <!-- Disposable function -->
+      <script>
+          function ifSendMessageCompleted() {
+              jivo_api.sendMessage("Client #123 - Заказ 1");
+              jivo_api.open();
+    
+              //The function is destroyed after the 1st complete
+              ifSendMessageCompleted = () => {};
+          }
+      </script> 
   </body>
 </html>
