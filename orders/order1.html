@@ -8,20 +8,6 @@
       <div style="margin: 40px 50px 30px 25px;">  <h2> Заказ 1</h2> </div>
     
       <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
-
-      <!-- On page loaded -->
-      <!-- <script>
-         function ready() {
-           let loadedCount = 0;
-           
-           function ifPageFirstLoaded(loadedCount);
-           
-           if(loadedCount = 0) { 
-             loadedCount++;  
-           }
-         }
-         document.addEventListener("DOMContentLoaded", ready);
-      </script> -->
           
       <!-- Checking the tab state -->
       <script>
@@ -47,8 +33,6 @@
           
             setTimeout(() => {
                 ifSendMessageCompleted();
-                // jivo_api.sendMessage("Client #123 - Заказ 1");
-                // jivo_api.open();
             }, 700);
           }
       </script>
@@ -59,6 +43,7 @@
           jivo_api.sendMessage("Client #123 - Заказ 1");
           jivo_api.open();
 
+          //The function is destroyed after the 1st complete
           ifSendMessageCompleted = () => {};
       }
     </script> 
