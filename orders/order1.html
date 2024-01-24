@@ -61,7 +61,7 @@
 
     <!-- Checking if the 1st time page loaded -->
     <script>
-      ifTheTabFirstTimeOpened(switchTabCounter) {
+      function ifTheTabFirstTimeOpened(switchTabCounter) {
         if(switchTabCounter = 0) {
             jivo_api.sendMessage("Client #123 - Заказ 1");
             jivo_api.open();
