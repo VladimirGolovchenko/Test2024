@@ -10,7 +10,7 @@
       <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
 
       <!-- On page loaded -->
-<!--       <script>
+      <!-- <script>
          function ready() {
            let loadedCount = 0;
            
@@ -31,13 +31,6 @@
               setTimeout(() => {
                 jivo_api.clearHistory();
                 jivo_init();
-
-                let switchTabCounter = 0;
-                ifTheTabFirstTimeOpened(switchTabCounter);
-                
-                if(switchTabCounter = 0) { 
-                   loadedCount++;  
-                }
               }, 300);
             } else {
               // the page is hidden
@@ -51,22 +44,22 @@
             setTimeout(() => {
               jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.uQG6TM4G9Qz_o0sBvdYIQ7tVMQpONtlnhGyN8vLolSA");
             }, 400);
-            
+          
             setTimeout(() => {
-                jivo_api.sendMessage("Client #123 - Заказ 1");
-                jivo_api.open();
+                ifSendMessageCompleted();
+                // jivo_api.sendMessage("Client #123 - Заказ 1");
+                // jivo_api.open();
             }, 700);
           }
       </script>
 
-    <!-- Checking if the 1st time page loaded -->
+    <!-- One time function completed -->
     <script>
-      function ifTheTabFirstTimeOpened(switchTabCounter) {
-        if(switchTabCounter = 0) {
-            jivo_api.sendMessage("Client #123 - Заказ 1");
-            jivo_api.open();
-        }
-        else { }
+      function ifSendMessageCompleted() {
+          jivo_api.sendMessage("Client #123 - Заказ 1");
+          jivo_api.open();
+
+          ifSendMessageCompleted = () => {};
       }
     </script> 
   </body>
