@@ -16,10 +16,12 @@
 	//  Коллбэк функция при успешной инициализации и загрузки всех данных виджета
 	function jivo_onLoadCallback() {
 	 
-	   //скрываем стандартную кнопку Jivo
-	   const jivo_custom_widget = true;
+		//скрываем стандартную кнопку Jivo
+		const jivo_custom_widget = true;
+		console.log("Default button has been hidden");
 	 
-	   jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQifQ.NMJB1eewtWWsHH_NMvBUZ8rgYbX8pwELPEnmsdMiyNo");
+		jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQifQ.NMJB1eewtWWsHH_NMvBUZ8rgYbX8pwELPEnmsdMiyNo");
+		console.log("The JWT has set");
 	}
 	</script>
 </body>
