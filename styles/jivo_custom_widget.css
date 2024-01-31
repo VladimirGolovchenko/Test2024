@@ -1,0 +1,40 @@
+/* hide the original widget - that there were no two labels on the screen*/
+#jivo_chat_widget{
+	display: none;
+}
+
+
+/* the default style - for offline messages if no one is online */
+#jivo_custom_widget{
+	position: fixed;
+	bottom: 20px;
+	right: 150px;
+	cursor: pointer;
+	border-radius: 80%;
+  	width: 90px;
+	height: 90px;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	box-shadow: 0 19px 38px 0 rgb(34 36 43 / 20%);
+	transition: transform 0.2s ease;
+}
+
+#jivo_custom_widget:hover {
+	box-shadow: 0 19px 38px 0 rgb(34 36 43 / 30%);
+	transform: scale(1.1);
+}
+
+/* if there are operators online - show other label*/
+#jivo_custom_widget.jivo_online {
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2231%22%20viewBox%3D%220%200%2030%2031%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M2.967%2022.226l-.025.008s7.698%2013.9%2026.975%205.546c0%200-1.495-1.752-4.384-3.52a14.067%2014.067%200%200%200%202.588-14.047c-2.655-7.297-10.7-11.07-17.964-8.425C2.89%204.433-.847%2012.492%201.81%2019.79c.313.863.703%201.677%201.157%202.436z%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
+}
+
+#jivo_custom_widget.jivo_offline {
+	background-size: 40%;
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2225%22%20height%3D%2220%22%20viewBox%3D%220%200%2025%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D'%23fff'%20d%3D%22M22.5%205l-10%206.25L2.5%205V2.5l10%206.25%2010-6.25V5zm0-5h-20A2.49%202.49%200%200%200%200%202.5v15A2.5%202.5%200%200%200%202.5%2020h20a2.5%202.5%200%200%200%202.5-2.5v-15A2.5%202.5%200%200%200%2022.5%200z%22%2F%3E%3C%2Fsvg%3E%0A");
+}
+
+/* [class*='leaf'] {
+    display:none !important
+} */
