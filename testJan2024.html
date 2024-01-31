@@ -26,6 +26,10 @@
 				jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
 				document.body.appendChild(jivo_cstm_widget);
 
+				//Unread messages indicator
+				let countNewMsg = jivo_api.getUnreadMessagesCount();
+				jivo_cstm_widget.textContent  = countNewMsg;
+
 				//Default Jivo button hiding: the second way:
 				// const jivo_custom_widget = true;
 				
@@ -54,8 +58,8 @@
 
 				function jivo_onMessageReceived() {
 					//Unread messages indicator
-					let countNewMsg = jivo_api.getUnreadMessagesCount();
-					jivo_cstm_widget.textContent  = countNewMsg;
+					let countNewMsg2 = jivo_api.getUnreadMessagesCount();
+					jivo_cstm_widget.textContent  = countNewMsg2;
 
 				}
 		
