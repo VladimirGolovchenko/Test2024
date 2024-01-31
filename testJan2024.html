@@ -5,11 +5,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Test page Jivo</title>
-	<script type="module" src="/scripts/jivo_custom_widget.js"></script>
-	<link rel="stylesheet" href="/styles/jivo_custom_widget.css">
+	<!-- <script type="module" src="/scripts/jivo_custom_widget.js"></script>
+	<link rel="stylesheet" href="/styles/jivo_custom_widget.css"> -->
 </head>
 
 <body>
    <script src="//code.jivo.ru/widget/kCpr9nOShH" async></script>
+
+   <script>
+	//  Коллбэк функция при успешной инициализации и загрузки всех данных виджета
+	function jivo_onLoadCallback() {
+	 
+	   //скрываем стандартную кнопку Jivo
+	   const jivo_custom_widget = true;
+	 
+	   jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQifQ.NMJB1eewtWWsHH_NMvBUZ8rgYbX8pwELPEnmsdMiyNo");
+	}
+	</script>
 </body>
 </html>
