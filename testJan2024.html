@@ -17,6 +17,10 @@
   			Callback function that is called immediately after JivoChat is loaded
      		*/
 			function jivo_onLoadCallback(){
+				//Set JWT for the history loading
+				let jwt_for_client_4 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQifQ.NMJB1eewtWWsHH_NMvBUZ8rgYbX8pwELPEnmsdMiyNo";
+				jivo_api.setUserToken(jwt_for_client_4);
+				
 				// Create a DIV element for the label
 				window.jivo_cstm_widget = document.createElement('div');
 				jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
@@ -59,10 +63,6 @@
 				if (jivo_cstm_widget)
 					jivo_cstm_widget.style.display = 'block';
 			}
-
-			//Set JWT for the history loading
-			let JWT_for_client_4 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQifQ.NMJB1eewtWWsHH_NMvBUZ8rgYbX8pwELPEnmsdMiyNo";
-			jivo_api.setUserToken(JWT_for_client_4);
 	</script>
 
 
