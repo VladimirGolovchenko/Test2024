@@ -26,6 +26,9 @@
 				jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
 				document.body.appendChild(jivo_cstm_widget);
 
+				//Unread messages indicator
+				jivo_cstm_widget.textContent = jivo_api.getUnreadMessagesCount();
+
 				//Default Jivo button hiding: the second way:
 				// const jivo_custom_widget = true;
 				
