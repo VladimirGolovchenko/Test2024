@@ -5,26 +5,106 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Test page Jivo</title>
-	<!-- <script type="module" src="/scripts/jivo_custom_widget.js"></script>
-	<link rel="stylesheet" href="/styles/jivo_custom_widget.css"> -->
 </head>
 
 <body>
-   <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
+	<script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
 
-   <script>
-	//  Коллбэк функция при успешной инициализации и загрузки всех данных виджета
-	function jivo_onLoadCallback() {
-	 
-		//скрываем стандартную кнопку Jivo
-		const jivo_custom_widget = true;
-		console.log("Default button has been hidden");
-	 
-		jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQifQ.NMJB1eewtWWsHH_NMvBUZ8rgYbX8pwELPEnmsdMiyNo");
-		console.log("The JWT has set");
-	}
+	
+	<script>
+
+		/* 
+  			Callback function that is called immediately after JivoChat is loaded
+     		*/
+			function jivo_onLoadCallback(){
+				// Create a DIV element for the label
+				window.jivo_cstm_widget = document.createElement('div');
+				jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
+				document.body.appendChild(jivo_cstm_widget);
+
+				//Default Jivo button hiding: the second way:
+				// const jivo_custom_widget = true;
+				
+				// Adds handlers click on the icon - to maximize the window when clicked
+				jivo_cstm_widget.onclick = function(){
+					jivo_api.showProactiveInvitation("Здравствуйте, Дорогой посетитель! Нашли то, что искали?");
+			    
+				        /* It can be clicked just once, if you need to start it many times, delete this single string below */
+					// jivo_api.sendMessage("Привет!");
+				}
+				
+				// Change the CSS class if there are agents online
+				if (jivo_api.chatMode() === "online"){
+					jivo_cstm_widget.setAttribute("class", "jivo_online");
+				} else {
+					jivo_cstm_widget.setAttribute("class", "jivo_offline");
+				}
+				
+				// Now you can show the user a shortcut
+				window.jivo_cstm_widget.style.display='block';
+				
+				jivo_cstm_widget.style.backgroundColor = jivo_config.widget_color;
+			}
+		
+		/*
+			Callback function jivo_onOpen and jivo_onClose called whenever the chat window JivoChat is expanded or collapsed by the user or by the proactive invitations rule.
+		*/
+			function jivo_onOpen(){
+				// If chat is deployed - hide shortcut
+				if (jivo_cstm_widget)
+					jivo_cstm_widget.style.display = 'none';
+			}
+			function jivo_onClose(){
+				// If chat is minimized - show label
+				if (jivo_cstm_widget)
+					jivo_cstm_widget.style.display = 'block';
+			}
+
+			//Set JWT for the history loading
+			let JWT_for_client_4 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQifQ.NMJB1eewtWWsHH_NMvBUZ8rgYbX8pwELPEnmsdMiyNo";
+			jivo_api.setUserToken(JWT_for_client_4);
 	</script>
+
+
+	<style>
+
+		/* hide the original widget - that there were no two labels on the screen*/
+		#jivo_chat_widget{
+			display: none;
+		}
+		
+		/* the default style - for offline messages if no one is online */
+		#jivo_custom_widget{
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			cursor: pointer;
+			border-radius: 50%;
+		  	width: 65px;
+			height: 65px;
+			background-size: 50%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			box-shadow: 0 19px 38px 0 rgb(34 36 43 / 20%);
+			transition: transform 0.2s ease;
+		}
+		
+		#jivo_custom_widget:hover {
+			box-shadow: 0 19px 38px 0 rgb(34 36 43 / 30%);
+			transform: scale(1.1);
+		}
+		
+		/* if there are operators online - show other label*/
+		#jivo_custom_widget.jivo_online {
+			background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2231%22%20viewBox%3D%220%200%2030%2031%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M2.967%2022.226l-.025.008s7.698%2013.9%2026.975%205.546c0%200-1.495-1.752-4.384-3.52a14.067%2014.067%200%200%200%202.588-14.047c-2.655-7.297-10.7-11.07-17.964-8.425C2.89%204.433-.847%2012.492%201.81%2019.79c.313.863.703%201.677%201.157%202.436z%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
+		}
+		
+		#jivo_custom_widget.jivo_offline {
+			background-size: 40%;
+			background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2225%22%20height%3D%2220%22%20viewBox%3D%220%200%2025%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D'%23fff'%20d%3D%22M22.5%205l-10%206.25L2.5%205V2.5l10%206.25%2010-6.25V5zm0-5h-20A2.49%202.49%200%200%200%200%202.5v15A2.5%202.5%200%200%200%202.5%2020h20a2.5%202.5%200%200%200%202.5-2.5v-15A2.5%202.5%200%200%200%2022.5%200z%22%2F%3E%3C%2Fsvg%3E%0A");
+		}
+	</style>
+
+	
 </body>
 </html>
-
-<!-- https://vladimirgolovchenko.github.io/Test2024/testJan2024 -->
