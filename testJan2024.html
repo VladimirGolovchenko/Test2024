@@ -26,9 +26,6 @@
 				jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
 				document.body.appendChild(jivo_cstm_widget);
 
-				//Unread messages indicator
-				jivo_cstm_widget.textContent = jivo_api.getUnreadMessagesCount();
-
 				//Default Jivo button hiding: the second way:
 				// const jivo_custom_widget = true;
 				
@@ -53,6 +50,14 @@
 				
 				jivo_cstm_widget.style.backgroundColor = jivo_config.widget_color;
 			}
+
+
+				function jivo_onMessageReceived() {
+					//Unread messages indicator
+					let countNewMsg = jivo_api.getUnreadMessagesCount();
+					jivo_cstm_widget.textContent  = countNewMsg;
+
+				}
 		
 		/*
 			Callback function jivo_onOpen and jivo_onClose called whenever the chat window JivoChat is expanded or collapsed by the user or by the proactive invitations rule.
@@ -79,6 +84,10 @@
 		
 		/* the default style - for offline messages if no one is online */
 		#jivo_custom_widget{
+			font-size: x-large;
+			color: red;
+			text-align: right;
+			
 			position: fixed;
 			bottom: 20px;
 			right: 20px;
