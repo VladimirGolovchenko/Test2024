@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Test page Jivo</title>
+</head>
+
+<body>
+	<script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
+
+  <script>
+	  window.jivo_chat_page = true;
+  </script>
+ 
+</body>
+</html>
