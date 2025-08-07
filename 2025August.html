@@ -10,6 +10,129 @@
 <body>
 
 	<script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
+
+
+
+	
+	<!-- Кнопка 1 -->
+	<div id="jivo_custom_widget" onclick="jivo_api.open();"  ><div id="jivo_custom_widget-text">Какая-то кастомная кнопка</div>
+	
+	<script>
+	//  Коллбэк функция при успешной инициализации и загрузки всех данных виджета
+	function jivo_onLoadCallback() {
+	   //скрываем стандартную кнопку Jivo
+	   const jivo_custom_widget = true;
+	}
+	</script>
+	
+	<!-- Скрываем кастомную кнопку при открытии чата -->
+	<script>
+	 function jivo_onOpen() {
+	 jivo_custom_widget.style.display = 'none';
+	}
+	</script>
+	
+	<!-- Показываем кастомную кнопку при закрытии чата -->
+	<script>
+	function jivo_onClose() {
+	 jivo_custom_widget.style.display = 'block';
+	}
+	</script>
+	
+
+	
+
+	<style>
+
+			/* 
+			#1 Установка кастомной ширины окна 
+			*/
+			
+			jdiv#jcont {
+			    width: 420px!important
+			}
+			
+			jdiv#jcont>jdiv>jdiv>jdiv>jdiv>jdiv>jdiv>jdiv>jdiv>jdiv>jdiv:last-child {
+			    max-width: 360px
+			}
+			
+			jdiv#jcont>jdiv:nth-child(3)>jdiv:first-child>jdiv>jdiv>jdiv>jdiv:last-child {
+			    width: 388px
+			}
+			
+			jdiv#jcont>jdiv:nth-child(3)>jdiv:nth-child(3)>jdiv:first-child>jdiv:first-child,jdiv#jcont>jdiv:nth-child(3)>jdiv:nth-child(3)>jdiv:first-child>jdiv:first-child textarea {
+			    width: 420px!important
+			}
+			
+			
+			/* 
+			#2 Скрываем зелёный лепесток-индикатор, меняем скругление с 12px на 2px, и шрифт
+			*/
+			
+			jdiv {
+			    font-weight: 2!important;
+			    font-family: "Arial";
+			
+			 
+			}
+			
+			jdiv[class^="header_"] > jdiv {
+			   border-top-right-radius: 10px!important;
+			}
+			
+			jdiv[class^="globalClass__"] jdiv[class^="container__"] {
+			    border-top-right-radius: 10px !important;
+			}
+			
+			jdiv[class^="globalClass__"] jdiv[class^="main__"] {
+			    border-top-right-radius: 10px !important;
+			}
+			
+			jdiv[class^="globalClass__"] jdiv[class^="leaf_"] {
+			    display: none !important;
+			 
+			 
+			}
+			
+			
+			
+			/* 
+			#2 Стили кастомной кнопки
+			*/
+			
+			#jivo_custom_widget {
+			    background: 'linear-gradient(95deg, rgb(7, 232, 151) 20%, rgb(7, 232, 151) 80%)';
+			    border-radius: 8px;
+			    box-shadow: 0 12px 14px 8px rgba(0,0,0,.17);
+			    height: 40px;
+			    position: fixed;
+			    bottom: 0px;
+			    right: 40px;
+			}
+			
+			#jivo_custom_widget-text {
+			    color: black;
+			    font-family: system-ui,-apple-system,Arial,sans-serif;
+			    text-align: center;
+			    vertical-align: middle;
+			    font-size: 16px !important;
+			    font-weight: 400!important;
+			    border-radius: 8px;
+			    box-shadow: 0 6px 10px rgba(244,0,0,.25);
+			    background: linear-gradient(95deg, rgb(7, 232, 151) 20%, rgb(7, 232, 151) 80%);
+			    font-size: 16px;
+			    line-height: 16px;
+			    cursor: pointer;
+			    min-width: 180px;
+			    padding: 16px 14px
+			
+			}
+
+
+ 
+
+		
+	</style>
  
  
 </body>
