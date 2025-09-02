@@ -41,20 +41,27 @@
 	<script>
 		function jivo_onLoadCallback() {
 
-		jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlZHMjAyNTA5MDIifQ.i5fIaZOtLVmqlEZ9o3c7hUWRPe9d3xbQre8CgFV8hQg");
-			
-			// jivo_api.setClientAttributes({
-			//   "userId": 202509011312,
-			//   "moderationLink": "https://youdo.com/vladimirjivotest202509011312"			})
-			// }
+			jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlZHMjAyNTA5MDIifQ.i5fIaZOtLVmqlEZ9o3c7hUWRPe9d3xbQre8CgFV8hQg");
+				
+				// jivo_api.setClientAttributes({
+				//   "userId": 202509011312,
+				//   "moderationLink": "https://youdo.com/vladimirjivotest202509011312"			})
+				// }
+	
+				jivo_api.setClientAttributes({
+					  "Schyotchik": 20250902,
+					  "Gorod": "Moscow"			
+				});
+		}
 
+		function jivo_onMessageSent() {
 			jivo_api.setClientAttributes({
 				  "Schyotchik": 20250902,
 				  "Gorod": "Moscow"			
 			});
 		}
 
-			
+		
 	</script>
 
 	
