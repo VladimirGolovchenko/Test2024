@@ -8,6 +8,314 @@
 </head>
 
 <body>
+	
+
+		<!-- Кнопка 1 -->
+		<div id="jivo_custom_widget" class="jivo_online" onclick="var var1 = 'LHhfJ0BUs4'; myfunc(var1);" style="display: block;"><div id="jivo_custom_widget-text">Чат с компанией ЕВРАЗИЯ</div><div id="jivo_custom_widget-logo-wrapper"><div id="jivo_custom_widget-logo">
+		<!--  <img src="https://wonder-day.com/wp-content/uploads/2023/03/wonder-day-brunette-face-avatar-49.jpg"></div></div></div> -->
+		
+		<!-- Кнопка 1 -->
+		<!-- <div id="jivo_custom_widget" class="jivo_online" onclick="var var1 = '8Bu8T96uwN'; myfunc(var1);" style="display: block;"><div id="jivo_custom_widget-text">Чат с компанией ЕВРАЗИЯ</div><div id="jivo_custom_widget-logo-wrapper"><div id="jivo_custom_widget-logo"> -->
+		<!--  <img src="https://wonder-day.com/wp-content/uploads/2023/03/wonder-day-brunette-face-avatar-49.jpg"></div></div></div> -->
+		 
+		 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7OifgkUJ1304GdPtfRJKIbtYVdGc9UtM_yEkUycG4TZktt2oxSpudCvSdCf_SkRhUdho&usqp=CAU"></div></div></div>
+		
+		<!-- Кнопка 2 -->
+		<div id="jivo_custom_widget_2" class="jivo_online_2"  onclick="var var2 = 'tpUuEKVbrH'; myfunc(var2);" style="display: block; "><div id="jivo_custom_widget_2-text" style="color: white; background-color: purple;">Чат с компанией АФРИКА</div><div id="jivo_custom_widget_2-logo-wrapper"><div id="jivo_custom_widget_2-logo">
+		<!-- <img src="https://wonder-day.com/wp-content/uploads/2023/03/wonder-day-brunette-face-avatar-21.jpg"></div></div></div> -->
+		
+		 
+		 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHnK3HKKv7Tuh3YsXdBFcGmRU5zuIGomOlEKnc9C1TC7RehbQxhvrQVgNnLRTxyzWdQpk&usqp=CAU"></div></div></div>
+		 
+		
+		<!-- Загрузка выбранного кода виджета (опционально, если мультиязычный сайт, либо по разным кнопка нужно открывать разные чаты с разными конфигурациями) -->
+		<script>
+		  function myfunc(widgetId) {
+		    if (window.jivo_destroy) {
+		      window.jivo_destroy();
+		    }
+		    var url = '//code.jivo.ru/widget/' + widgetId;
+		    var headTag = document.getElementsByTagName("head")[0];
+		    var jqTag = document.createElement('script');
+		    jqTag.async = true;
+		    jqTag.src = url;
+		    headTag.appendChild(jqTag);
+		  }
+		</script>
+		
+		<script>
+		//  Коллбэк функция при успешной инициализации и загрузки всех данных виджета
+		function jivo_onLoadCallback() {
+		 
+		   //скрываем стандартную кнопку Jivo
+		   const jivo_custom_widget = true;
+		 
+		   jivo_api.setUserToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.uQG6TM4G9Qz_o0sBvdYIQ7tVMQpONtlnhGyN8vLolSA");
+		   
+		 
+		   //проверяем режим работы чата онлайн/оффлайн
+		   let chatMode = jivo_api.chatMode();
+		   if (chatMode === 'offline') {
+		      //открываем чат для оффлайн режима (текст приветствия берётся из настроек раздела Дизайн, в кабинете Jivo)
+		      jivo_api.open();
+		   } else {
+		      // открываем чат с активным приглашением для онлайн режима
+		      // jivo_api.open();
+		      jivo_api.showProactiveInvitation("Добрый день, приветствую на сайте нашей компании!");
+		   }
+		}
+		</script>
+		
+		<!-- Скрываем кастомную кнопку при открытии чата -->
+		<script>
+		 function jivo_onOpen() {
+		 jivo_custom_widget.style.display = 'none';
+		 jivo_custom_widget_2.style.display = 'none';
+		}
+		</script>
+		
+		<!-- Показываем кастомную кнопку при закрытии чата -->
+		<script>
+		function jivo_onClose() {
+		 jivo_custom_widget.style.display = 'block';
+		 jivo_custom_widget_2.style.display = 'block';
+		}
+		</script>
+
+
+
+
+	
+		<style>
+
+				/* @font-face {
+				    font-weight: 400;
+				    font-style: normal;
+				    font-family: MuseoSans;
+				    src: local("Museo Sans Cyrl 300"),url(/_next/static/media/MuseoSans_300.08f5d299.woff) format("woff")
+				}
+				
+				@font-face {
+				    font-weight: 700;
+				    font-style: normal;
+				    font-family: MuseoSans;
+				    src: local("Museo Sans Cyrl 700"),url(/_next/static/media/MuseoSans_700.8960475d.woff) format("woff")
+				}
+				 */
+				
+				/* 
+				body,button,html,input,textarea {
+				    font-family: MuseoSans,Gill Sans,Lucida Grande,Arial,Helvetica,sans-serif;
+				    font-style: normal
+				}
+				
+				button,input,textarea {
+				    appearance: none;
+				    -moz-appearance: none;
+				    -webkit-appearance: none
+				}
+				
+				button::placeholder,input::placeholder,textarea::placeholder {
+				    color: #787878
+				}
+				
+				p {
+				    margin-top: 1.2rem;
+				    margin-bottom: 1.2rem
+				}
+				
+				a {
+				    color: #7ca7c8
+				} */
+
+				#jivo_custom_widget {
+				    position: fixed;
+				    right: 10px;
+				    bottom: 700px;
+				    z-index: 1;
+				    cursor: pointer;
+				    padding: 0 15px 15px 0;
+				    display: table;
+				    font-size: 14px;
+				    z-index: 100
+				}
+				
+				#jivo_custom_widget-text {
+				    border-radius: 8px;
+				    color: #1c1c1c;
+				    position: relative;
+				    display: table-cell;
+				    vertical-align: middle;
+				    box-shadow: 0 6px 10px rgba(0,0,0,.25);
+				    background: #ffd828;
+				    font-size: 14px;
+				    line-height: 16px;
+				    cursor: pointer;
+				    max-width: 200px;
+				    padding: 16px 14px
+				}
+				
+				@media(max-width: 47.9em) {
+				    #jivo_custom_widget-text {
+				        display:none
+				    }
+				}
+				
+				#jivo_custom_widget-text:after,#jivo_custom_widget-text:before {
+				    left: 100%;
+				    border: solid transparent;
+				    content: " ";
+				    height: 0;
+				    width: 0;
+				    position: absolute;
+				    pointer-events: none
+				}
+				
+				#jivo_custom_widget-text:before {
+				    border-color: hsla(0,0%,80%,0);
+				    border-width: 7px;
+				    margin-top: -7px
+				}
+				
+				#jivo_custom_widget-text:after {
+				    border-color: hsla(0,0%,100%,0);
+				    border-width: 6px;
+				    margin-top: -6px
+				}
+				
+				#jivo_custom_widget-text:after,#jivo_custom_widget-text:before {
+				    border-left-color: #ffd828;
+				    bottom: 17px
+				}
+				
+				#jivo_custom_widget-logo-wrapper {
+				    display: table-cell;
+				    padding-left: 10px
+				}
+				
+				#jivo_custom_widget-logo {
+				    border: 4px solid #ffd828;
+				    background: #ffd828;
+				    width: 48px;
+				    height: 48px;
+				    box-shadow: 0 6px 10px rgba(0,0,0,.25);
+				    cursor: pointer;
+				    border-radius: 48px;
+				    background-position: 50%;
+				    background-size: cover
+				}
+				
+				#jivo_custom_widget-logo img {
+				    width: 48px;
+				    height: 48px;
+				    object-fit: contain;
+				    border-radius: 48px
+				}
+				
+				
+				#jivo_custom_widget_2 {
+				
+				    position: fixed;
+				    right: 50px;
+				    bottom: 600px;
+				    z-index: 1;
+				    cursor: pointer;
+				    padding: 0 15px 15px 0;
+				    display: table;
+				    font-size: 14px;
+				    z-index: 100
+				}
+				
+				#jivo_custom_widget_2-text {
+				    background: red;
+				    border-radius: 8px;
+				    position: relative;
+				    display: table-cell;
+				    vertical-align: middle;
+				    box-shadow: 0 6px 10px rgba(0,0,0,.25);
+				    background: #ffd828;
+				    font-size: 14px;
+				    line-height: 16px;
+				    cursor: pointer;
+				    max-width: 200px;
+				    padding: 16px 14px
+				}
+				
+				@media(max-width: 47.9em) {
+				    #jivo_custom_widget_2-text {
+				        display:none
+				    }
+				}
+				
+				#jivo_custom_widget_2-text:after,#jivo_custom_widget-text:before {
+				    left: 100%;
+				    border: solid transparent;
+				    content: " ";
+				    height: 0;
+				    width: 0;
+				    position: absolute;
+				    pointer-events: none
+				}
+				
+				#jivo_custom_widget_2-text:before {
+				    border-color: hsla(0,0%,80%,0);
+				    border-width: 7px;
+				    margin-top: -7px
+				}
+				
+				#jivo_custom_widget_2-text:after {
+				    border-color: hsla(55,0%,100%,0);
+				    border-width: 6px;
+				    margin-top: -6px
+				}
+				
+				#jivo_custom_widget_2-text:after,#jivo_custom_widget-text:before {
+				    border-left-color: #1111;
+				    bottom: 17px
+				}
+				
+				#jivo_custom_widget_2-logo-wrapper {
+				    display: table-cell;
+				    padding-left: 10px
+				}
+				
+				#jivo_custom_widget_2-logo {
+				    border: 4px solid purple;
+				    background: #1111;
+				    width: 48px;
+				    height: 48px;
+				    box-shadow: 0 6px 10px rgba(0,0,0,.25);
+				    cursor: pointer;
+				    border-radius: 48px;
+				    background-position: 50%;
+				    background-size: cover
+				}
+				
+				#jivo_custom_widget_2-logo img {
+				    width: 48px;
+				    height: 48px;
+				    object-fit: contain;
+				    border-radius: 48px
+				}
+				
+				
+				jdiv[class^="header_"] > jdiv {
+				    border-top-right-radius: 12px!important;
+				}
+				
+				jdiv[class^="header_"] jdiv[class^="leaf_"] {
+				    display: none !important;
+				}
+
+			
+		</style>
+
+
+
+
+
+
+	
 
 <!-- 	<script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script> -->
 
@@ -36,7 +344,7 @@
 --> 
 
 
-	<script src="//code.jivo.ru/widget/nCSBsWL28t" async></script>
+	<!-- <script src="//code.jivo.ru/widget/nCSBsWL28t" async></script>
 	
 	<script>
 		function jivo_onLoadCallback() {
@@ -47,10 +355,10 @@
 			
 				jivo_api.setClientAttributes({
 				  "userId": 20250909,
-				  "moderationLink": "https://youdo.com/vladimir9"})
+				  "moderationLink": "https://youdo.com/vladimir9"}) -->
 			
 	
-				// jivo_api.setClientAttributes({
+				<!-- // jivo_api.setClientAttributes({
 				// 	  "Schyotchik": 202509022,
 				// 	  "Gorod": "Moscow2"			
 				// });
@@ -64,10 +372,10 @@
 		// 							  "Gorod": "Moscow2"			
 		// 						});
   //           			 },  2000);
-		// }
+		// } -->
 
 		
-	</script>
+	<!-- </script> -->
 
 	
 <!-- Yandex.Metrika counter -->
